@@ -1,0 +1,17 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: blogging_mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: fortune
+      MYSQL_DATABASE: blogging_platform
+      MYSQL_USER: blog_user
+      MYSQL_PASSWORD: fortune
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+volumes:
+  mysql_data:
