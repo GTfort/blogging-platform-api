@@ -6,7 +6,7 @@ const morgan = require("morgan");
 require("dotenv").config();
 
 const database = require("./config/database");
-const errorHandler = require("./middleware/errorHandler");
+const { errorHandler } = require("./middleware/errorHandler");
 const logger = require("./middleware/logger");
 const { notFound } = require("./utils/responses");
 
